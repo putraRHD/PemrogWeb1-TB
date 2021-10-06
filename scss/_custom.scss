@@ -140,6 +140,7 @@ textarea:-moz-placeholder {
     display: block;
     text-align: center;
     font-weight: 300;
+    color: #fff;
     @include breakpoint(medium) {
         font-size: rem-calc(30);
     }
