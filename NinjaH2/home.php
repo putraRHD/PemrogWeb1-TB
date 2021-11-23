@@ -33,11 +33,11 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 						<table class="table" style="width: 32rem;">
 							<thead>
 								<tr>
-									<th scope="col">#</th>
-									<th scope="col">id</th>
-									<th scope="col">Name</th>
+									<th scope="col">ID Reservasi</th>
+									<th scope="col">Nama Customer</th>
+									<th scope="col">Tanggal Reservasi</th>
+									<th scope="col">Nomor Telp</th>
 									<th scope="col">Email</th>
-									<th scope="col">Message</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -46,10 +46,10 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 								while ($rows = mysqli_fetch_assoc($res)) { ?>
 									<tr>
 										<th scope="row"><?= $i ?></th>
-										<td><?= $rows['id'] ?></td>
-										<td><?= $rows['name'] ?></td>
-										<td><?= $rows['email'] ?></td>
-										<td><?= $rows['message'] ?></td>
+										<td><?= $rows['ID Reservasi'] ?></td>
+										<td><?= $rows['Nama Customer'] ?></td>
+										<td><?= $rows['Nomor Telp'] ?></td>
+										<td><?= $rows['Email'] ?></td>
 									</tr>
 								<?php $i++;
 								} ?>
