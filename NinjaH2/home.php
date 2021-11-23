@@ -16,10 +16,10 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 		<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh">
 			<?php if ($_SESSION['role'] == 'admin') { ?>
 				<!-- Admin AREA -->
-				<div class="card" style="width: 18rem;">
+				<div>
 					<img src="img/admin-default.png" class="card-img-top" alt="admin image">
 					<div class="card-body text-center">
-						<h5 class="card-title">
+						<h5 style="color: white" class="card-title">
 							<?= $_SESSION['name'] ?>
 						</h5>
 						<a href="logout.php" class="btn btn-dark">Logout</a>
@@ -29,8 +29,8 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 					<?php include 'php/members.php';
 					if (mysqli_num_rows($res) > 0) { ?>
 
-						<h1 class="display-4 fs-1">List Reservation</h1>
-						<table class="table" style="width: 50rem;">
+						<h1 style="color: white" class="display-4 fs-1 ">List Reservation</h1>
+						<table style="color: white" class="table" style="width: 50rem;">
 							<thead>
 								<tr>
 									<th scope="col">ID Reservasi</th>
@@ -38,9 +38,10 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 									<th scope="col">Tanggal Reservasi</th>
 									<th scope="col">Nomor Telp</th>
 									<th scope="col">Email</th>
+									<th scope="col">Acara</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody style="color: white;">
 								<?php
 								$i = 1;
 								while ($rows = mysqli_fetch_assoc($res)) { ?>
@@ -50,6 +51,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 										<td><?= $rows['tanggalreservasi'] ?></td>
 										<td><?= $rows['nomortelp'] ?></td>
 										<td><?= $rows['email'] ?></td>
+										<td><?= $rows['Acara'] ?></td>
 									</tr>
 								<?php $i++;
 								} ?>
