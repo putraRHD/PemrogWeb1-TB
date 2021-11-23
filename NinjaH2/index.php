@@ -50,6 +50,7 @@
 		          class="btn btn-primary">LOGIN</button>
 		</form>
       </div>
+	  <img src="img/res1.jpg" width="100" height="100"/>
 </body>
 </html>
 <?php }else{
