@@ -8,7 +8,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 
 	<head>
 		<title>HOME</title>
-		<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/login.css">
 	</head>
 
@@ -30,7 +30,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 					if (mysqli_num_rows($res) > 0) { ?>
 
 						<h1 class="display-4 fs-1">List Reservation</h1>
-						<table class="table" style="width: 32rem;">
+						<table class="table" style="width: 50rem;">
 							<thead>
 								<tr>
 									<th scope="col">ID Reservasi</th>
@@ -46,10 +46,10 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 								while ($rows = mysqli_fetch_assoc($res)) { ?>
 									<tr>
 										<th scope="row"><?= $i ?></th>
-										<td><?= $rows['ID Reservasi'] ?></td>
-										<td><?= $rows['Nama Customer'] ?></td>
-										<td><?= $rows['Nomor Telp'] ?></td>
-										<td><?= $rows['Email'] ?></td>
+										<td><?= $rows['namacustomer'] ?></td>
+										<td><?= $rows['tanggalreservasi'] ?></td>
+										<td><?= $rows['nomortelp'] ?></td>
+										<td><?= $rows['email'] ?></td>
 									</tr>
 								<?php $i++;
 								} ?>
@@ -67,7 +67,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 							<?= $_SESSION['name'] ?>
 						</h5>
 						<a href="logout.php" class="btn btn-dark">Logout</a>
-						<a href="https://www.smkn22jakarta.sch.id/ekskul/" class="btn btn-dark">sokin 22</a>
 					</div>
 				</div>
 				<!-- END USERS AREA -->
