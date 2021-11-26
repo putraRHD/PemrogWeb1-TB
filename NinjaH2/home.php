@@ -47,11 +47,11 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 								while ($rows = mysqli_fetch_assoc($res)) { ?>
 									<tr>
 										<th scope="row"><?= $i ?></th>
-										<td><?= $rows['namacustomer'] ?></td>
-										<td><?= $rows['tanggalreservasi'] ?></td>
-										<td><?= $rows['nomortelp'] ?></td>
+										<td><?= $rows['name'] ?></td>
+										<td><?= $rows['date'] ?></td>
+										<td><?= $rows['phonenumber'] ?></td>
 										<td><?= $rows['email'] ?></td>
-										<td><?= $rows['Acara'] ?></td>
+										<td><?= $rows['event'] ?></td>
 									</tr>
 								<?php $i++;
 								} ?>

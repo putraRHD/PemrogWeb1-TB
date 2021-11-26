@@ -626,15 +626,13 @@
                 <!--.contact-info-->
                 <div class="contact-form scroll-reveal" data-origin="bottom" data-distance="20%">
                     <h3>Contact us</h3>
-                    <form>
-                        <input type="text" name="name" placeholder="Name">
+                    <form action="db_conn.php" method="POST">
+                        <input type="text" name="username" placeholder="Name">
                         <input type="email" name="email" placeholder="Email">
                         <input type="phonenumber" name="phonenumber" placeholder="Phone Number">
                         <input type="event" name="event" placeholder="Event">
-                        <label for="start">Reservation Date:</label>
-                        <input type="date" id="start" name="trip-start"
-                            value="2021-11-27"
-                            min="2021-11-27" max="2022-02-27">
+                        <input type="date" name="date">
+                        <!-- <input type="submit" value="submit"> -->
                         <button class="send-form">Send</button>
                     </form>
                 </div>

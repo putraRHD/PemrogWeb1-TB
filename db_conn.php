@@ -1,14 +1,19 @@
-<?php  
+<?php
+$con = mysqli_connect('localhost', 'root', '', 'system_restaurant');
 
-$sname = "localhost";
-$uname = "root";
-$password = "";
+// get the post records
+$username = $_POST['username'];
+$email = $_POST['email'];
+$phonenumber = $_POST['phonenumber'];
+$event = $_POST['event'];
+$date = $_POST['date'];
 
-$db_name = "tugasbejoy";
+// database insert SQL code
+$sql = "INSERT INTO `reservasi` (`id`, `name`, `email`, `phonenumber`, `event`, `date`) VALUES (0, '$username', '$email', '$phonenumber', '$event', '$date' )";
 
-$conn = mysqli_connect($sname, $uname, $password, $db_name);
+// insert in database 
+$rs = mysqli_query($con, $sql);
 
-if (!$conn) {
-	echo "Connection Failed!";
-	exit();
+if ($rs) {
+    echo "Reservation Has Been Submited";
 }
