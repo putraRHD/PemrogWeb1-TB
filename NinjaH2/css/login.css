@@ -103,7 +103,7 @@ html, body {
   position: fixed;
   z-index: -1;
   top:0; right:0; bottom:0; left:0;
-  background: url(https://www.wallpapertip.com/wmimgs/94-943776_restaurant-hd-wallpaper.jpg) center;
+  background: url(https://www.wallpapertip.com/wmimgs/94-943776_restaurant-hd-wallpaper.jpg)center;
   background-size: cover;
 }
 
